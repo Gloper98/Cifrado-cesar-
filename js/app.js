@@ -29,8 +29,6 @@ function begin(){
 				} else {
 				  $msge.val('');
 					newString = ['You can not enter numbers,',' just letters please :)'];
-					$encodeBtn.text('Try again');
-					$encodeBtn.off('click').click(reload);
 					}
 			}
 		}
