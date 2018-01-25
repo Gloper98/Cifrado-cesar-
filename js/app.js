@@ -6,7 +6,7 @@ function begin(){
 	var valueInput = document.getElementById('value-input');
 	var encode =(e) =>{
 		valueInput.innerText = msge.value;
-		var newString = [];
+		var newString = [ ];
 		var inputValue = msge.value;
 		if(inputValue.length === 0){
 			code.innerText='You should enter at least a letter in the input';
