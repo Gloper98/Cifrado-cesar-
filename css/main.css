@@ -1,0 +1,15 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto';
+}
+#encode-form {
+	margin-top: 7em;
+}
+#encode-label {
+	font-size: 25px;
+}
+#encode-btn {
+	margin-top: 3em;
+}
