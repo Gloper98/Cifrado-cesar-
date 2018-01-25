@@ -12,7 +12,7 @@ function begin(){
 		var newString = [];
 		var $inputValue = $msge.val();
 		if($inputValue.length === 0){
-			alert('Debes ingesar una palabra');
+			alert('You shoul enter at least a letter');
 		} else {
 			var firstStep = $inputValue.replace(/(^\s*)|(\s*$)/gi,'').replace(/[ ]{2,}/gi,' ').toLowerCase();
 			console.log(firstStep);
@@ -34,7 +34,12 @@ function begin(){
 					}
 			}
 		}
-		$code.text(newString.join(''));
+		if(newString.join('')*0!==0){
+			$code.text(newString.join(''));
+		} else {
+			$msge.val('');
+			$code.text('You can not use just the bar space my friend, type some fun things');
+		}
 	}
 	$encodeBtn.click(encode);
 }
