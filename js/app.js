@@ -35,34 +35,6 @@ function begin(){
 		}
 		$code.text(newString.join(''));
 	}
-	
-	function decode(){
-		var newString = [];
-		var $inputValue = $msge.val();
-		if($inputValue.length === 0){
-			alert('Debes ingesar una palabra');
-		} else {
-			var firstStep = $inputValue.replace(/(^\s*)|(\s*$)/gi,'').replace(/[ ]{2,}/gi,' ').toLowerCase();
-			console.log(firstStep);
-			for(var i =0;i< firstStep.length;i++){
-				if(firstStep[i]*0 !== 0){
-					if(firstStep.charCodeAt(i) >= 97 && firstStep.charCodeAt(i) <= 122){
-					  var ascciCode =firstStep.charCodeAt(i);
-					  var newAscciCode = ascciCode-(33%26);
-						var encodedString =String.fromCharCode(newAscciCode);
-						newString.push(encodedString);
-				  }
-				} else if (firstStep.charCodeAt(i) === 32) {
-					newString.push(' ');
-				} else {
-				  $msge.val('');
-					$encodeBtn.text('Try again');
-					$encodeBtn.off('click').click(reload);
-					}
-			}
-		}
-		$code.text(newString.join(''));
-	}
 	$encodeBtn.click(encode);
 }
 
