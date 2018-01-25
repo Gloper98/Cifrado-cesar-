@@ -4,15 +4,11 @@ function begin(){
 	var $decodeBtn = $('#decode-btn');
 	var $code = $('#code');
 	
-	function reload(){
-		window.location.href='index.html';
-	}
-	
 	function encode(e){
 		var newString = [];
 		var $inputValue = $msge.val();
 		if($inputValue.length === 0){
-			alert('You shoul enter at least a letter');
+			$code.text('You should enter at least a letter in the input');
 		} else {
 			var firstStep = $inputValue.replace(/(^\s*)|(\s*$)/gi,'').replace(/[ ]{2,}/gi,' ').toLowerCase();
 			console.log(firstStep);
@@ -30,13 +26,9 @@ function begin(){
 				  $msge.val('');
 					newString = ['You can not enter numbers,',' just letters please :)'];
 					}
+				  $msge.val('');
+				  $code.text(newString.join(''));
 			}
-		}
-		if(newString.join('')*0!==0){
-			$code.text(newString.join(''));
-		} else {
-			$msge.val('');
-			$code.text('You can not use just the bar space my friend, type some fun things');
 		}
 	}
 	$encodeBtn.click(encode);
