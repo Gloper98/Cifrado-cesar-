@@ -3,8 +3,9 @@ function begin(){
 	var $encodeBtn = $('#encode-btn');
 	var $decodeBtn = $('#decode-btn');
 	var $code = $('#code');
-	
+	var $valueInput = $('#value-input');
 	function encode(e){
+		$valueInput.text($msge.val());
 		var newString = [];
 		var $inputValue = $msge.val();
 		if($inputValue.length === 0){
@@ -30,6 +31,7 @@ function begin(){
 				  $code.text(newString.join(''));
 			}
 		}
+		$msge.val('');
 	}
 	$encodeBtn.click(encode);
 }
