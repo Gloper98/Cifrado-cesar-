@@ -7,9 +7,12 @@
 #encode-form {
 	margin-top: 7em;
 }
-#encode-label {
+#encode-label, #decode-label {
 	font-size: 25px;
 }
-#encode-btn {
+#encode-btn, #decode-btn {
 	margin-top: 3em;
+}
+#change-action {
+	margin-top: 2em;
 }

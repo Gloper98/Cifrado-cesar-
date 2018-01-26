@@ -9,13 +9,22 @@
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<button id="change-action" type="button" class="btn">change action</button>
+			</div>
+		</div>
+	</div>
 	<div class="container text-center">
 		<div class="row">
 			<div class="col-xs-12 col-md-12">
 				<div id="encode-form" class="form-group">
-          <label id="encode-label" for="encode">Encode whatever you want</label>
+          <label id="encode-label" for="encode" class="">Encode whatever you want</label>
+          <label id="decode-label" for="encode" class="hide">Decode whatever you want</label>
           <input type="encode" class="form-control" id="encode">
-          <button id="encode-btn" type="button" class="btn btn-warning">Encode or Decode</button>
+          <button id="encode-btn" type="button" class="btn btn-warning">Encode</button>
+          <button id="decode-btn" type="button" class="hide btn btn-info">Decode</button>
         </div>
 			</div>
 		</div>
