@@ -37,7 +37,7 @@ Cifrado-cesar->css>main.css
 Cifrado-cesar->index.html
 ```
 
-* **[Javascript](https://www.javascript.com/), [jQuery](https://jquery.com/), [ECMA script 6:](http://es6-features.org/#Constants)** Usada para darle funcionalidad a la pagina.
+* **[Javascript](https://www.javascript.com/), [jQuery](https://jquery.com/)** y **[ECMA script 6:](http://es6-features.org/#Constants)** Usada para darle funcionalidad a la pagina.
 ```javascript
  for(var i =0;i< firstStep.length;i++){
 				if(firstStep[i]*0 !== 0){
