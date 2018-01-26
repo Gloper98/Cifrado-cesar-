@@ -12,8 +12,8 @@ La presente es una web basada en el algoritmo de [Cifrado Cesar](https://en.wiki
 - Texto original: I want u to be alive.
 - Texto codificado: V JNAG H GB OR NYVIR.
 ```
-
-* **Un boton:** Contiene un evento que permite obtener los resultados(`decifrar o cifrar`)
+* **Boton 'Change':** Contiene un evento para cambiar el boton principal.
+* **Dos botones principales:** Contienen un evento que permite obtener los resultados(`decifrar o cifrar`)
 * **Una etiqueta h1 y una etiqueta p:** Los resultados se visualizaran en la etiqueta h1 y el texto original en la etiqueta p.
 
 ## Branches
@@ -43,7 +43,7 @@ Cifrado-cesar->index.html
 				if(firstStep[i]*0 !== 0){
 					if(firstStep.charCodeAt(i) >= 97 && firstStep.charCodeAt(i) <= 122){
 					  let ascciCode =firstStep.charCodeAt(i);
-					  let newAscciCode = (ascciCode-65+33)%26+65;
+					  let newAscciCode = (ascciCode-97+33)%26+97;
 						let encodedString =String.fromCharCode(newAscciCode);
 						newString.push(encodedString);
 						console.log(ascciCode);
