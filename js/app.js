@@ -33,5 +33,13 @@ onload = (() => {
 		}
 		msge.value='';
 	}
+	
+	var preEncode = (e)=>{
+		if(e.keyCode == 13){
+			encode();
+		}
+	}
+	
 	encodeBtn.addEventListener('click', encode);
+	window.addEventListener('keypress', preEncode);
 })()
